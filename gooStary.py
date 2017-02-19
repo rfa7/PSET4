@@ -4,9 +4,11 @@ def goo():
 	DO THIS TO IMPORT FILE:
 	sys.path.append('F:\\Dev\\Py')
 	"""
+	import sys
+	f=input('podaj nazwe pliku: ')
+	if not os.path.isfile('F:\\Dev\\Py\\'+f):
+		print('Nie ma takiego pilku!')
+		return None
 	print('Your programm is running!')
 	print('--------------------------')
-	exec(open('F:\\Dev\\Py\\'+'passw.py').read())
-
-def uruchom(x):
-	return exec.open(('f:\\dev\\py\\'+x).read())
+	exec(open('F:\\Dev\\Py\\'+f).read())
